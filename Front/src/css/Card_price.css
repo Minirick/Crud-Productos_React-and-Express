@@ -1,0 +1,44 @@
+.imgbox {
+    float: center;
+    text-align: center;
+    width: 378px;
+    border: 2px solid #7290e7;
+    margin: 4px;
+    padding: 6px;
+    border-radius: 1em;
+  }
+  
+  .button2 {
+    width: 40%;
+    height: 30px;
+    border: 1px solid#1D4ED8;
+    background-color: #ffff;
+ 
+  }
+
+  ol {
+    text-align: justify;
+
+  }
+
+  .imgbox2 {
+    float: center;
+    text-align: center;
+    width: 378px;
+    border: 2px solid #7290e7;
+    margin: 4px;
+    padding: 6px;
+    background-color: #fed700;
+    border-radius: 1em;
+
+  }
+
+  @media screen and (max-width: 1160px) {
+
+  }
+  @media screen and (max-width: 950px) {
+
+  }
+  @media screen and (max-width: 768px) {
+   
+  }
