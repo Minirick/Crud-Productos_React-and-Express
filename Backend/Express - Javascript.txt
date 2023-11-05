@@ -1,10 +1,19 @@
 
 
 //Comandos
-	npm init
-	npm install express
+	
+
+	
+	
+
+//Librerias
+	npm install express //framework
 	npm i -D nodemon 
-	npm i mongoose
+	npm i mongoose //Base datos no rek
+
+	npm i jsonwebtoken //verifica que el usuario este 
+	npm i bcrypt
+	npm i dotenv
 
 
 - Mongo atlas
@@ -26,10 +35,7 @@
 
 
 
-//Librerias
-	npm i jsonwebtoken //verifica que el usuario este 
-	npm i bcrypt
-	npm i dotenv
+
 
 
 //Correr servidor

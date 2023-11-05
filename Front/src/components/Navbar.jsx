@@ -7,6 +7,7 @@ import { ImCross } from "react-icons/im"
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   return (
     <>
@@ -27,7 +28,13 @@ const Navbar = () => {
           {/* <Link to='/Login' className='services'>
             <li>Contacto1</li>
           </Link> */}
-          <a className='button_login' href="/login">Ingresar</a>
+
+         
+          {isLoggedIn ? (
+            <a className='button_login' href="/login">Mi Perfil</a>
+          ) : (
+            <a className='button_login' href="/login">Ingresar</a>
+          )}
 
           
         </ul>

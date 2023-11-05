@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import "../css/Form.css"
+import "../css/Form_contact.css"
 import ImagenContact from "../img/contact.png"
 
 const Imagen = styled.img`

@@ -4,10 +4,11 @@ import React from 'react'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Navbar from './components/Navbar'
-import Home from "./components/Home"
-import Product from "./components/Product"
-import Contact from "./components/Contact"
-import Login from "./components/Login"
+import Home from "./paginas/Home"
+import Product from "./paginas/Products"
+import Contact from "./paginas/Contact"
+import Login from "./paginas/Login"
+import Register from "./paginas/Register"
 import Footer from "./components/Footer"
 
 
@@ -29,8 +30,11 @@ function App() {
           <Route path='/contact' compoent={Contact} exact>
             <Contact />
           </Route>
-          <Route path='/login' compoent={Contact} exact>
+          <Route path='/login' compoent={Login} exact>
             <Login />
+          </Route>
+          <Route path='/register' compoent={Register} exact>
+            <Register />
           </Route>
         </Switch>
       </Router>

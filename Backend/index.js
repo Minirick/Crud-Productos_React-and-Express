@@ -1,10 +1,11 @@
-import express from "express"
-import dotenv from "dotenv"
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
 import conectarDB from "./config/db.js";
 import adminRoutes from "./routes/adminRoutes.js"
 import usuarioRoutes from "./routes/usuarioRoutes.js"
 import pedidoRoutes from "./routes/pedidoRoutes.js"
-import promocionRoutes from "./routes/promocionRoutes.js"
+import productoRoutes from "./routes/productoRoutes.js"
 
 //const express = require ("express");
 
@@ -16,6 +17,27 @@ dotenv.config();
 
 conectarDB();
 
+
+
+// Configuración de cors
+const whitelist = ['http://localhost:5173'];
+
+const corsOption = {
+    origin: function(origin, callback){
+        if(whitelist.includes(origin)){
+            // puede consultar la API
+            callback(null, true);
+        }else{
+            // No esta permitido
+            callback(new Error("Error de Cors"));
+        }
+    },
+};
+
+app.use(cors(corsOption));
+
+
+  
 // Routing
 /*app.get('/', (req, res) => {
     res.send('Hello world')
@@ -24,7 +46,7 @@ conectarDB();
 app.use("/api/admin", adminRoutes);
 app.use("/api/usuarios", usuarioRoutes);
 app.use("/api/pedidos", pedidoRoutes);
-app.use("/api/promocion", promocionRoutes);
+app.use("/api/productos", productoRoutes);
 
 const PORT = process.env.PORT || 7777;
 

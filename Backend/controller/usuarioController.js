@@ -3,26 +3,51 @@ import generarId from "../helpers/generarId.js";
 import generarJWT from "../helpers/generarJWT.js";
 
 
+// const registrar = async (req, res) => {
+//     //evitar registros duplicados
+//     const { email } = req.body;
+//     const existeUsuario = await Usuario.findOne ({ email });
+
+//     if (existeUsuario){
+//         const error = new Error("Usuario Ya registrado");
+//         return res.status(400).json({ msg:error.message })
+//     }
+
+//     try{
+//         const usuario = new Usuario(req.body);
+//         usuario.token = generarId();
+//         const usuarioAlmacenado = await usuario.save();
+//         res.json(usuarioAlmacenado);        
+//     }catch(error){
+//         console.log(error);
+//     }
+// };
+
 const registrar = async (req, res) => {
-    //evitar registros duplicados
+    // Evitar registros duplicados
     const { email } = req.body;
-    const existeUsuario = await Usuario.findOne ({ email });
-
-    if (existeUsuario){
-        const error = new Error("Usuario Ya registrado");
-        return res.status(400).json({ msg:error.message })
+    const existeUsuario = await Usuario.findOne({ email });
+  
+    if (existeUsuario) {
+      const error = new Error("Usuario ya registrado");
+      return res.status(400).json({ msg:error.message })
     }
-
-    try{
-        const usuario = new Usuario(req.body);
-        usuario.token = generarId();
-        const usuarioAlmacenado = await usuario.save();
-        res.json(usuarioAlmacenado);        
-    }catch(error){
-        console.log(error);
+  
+    try {
+      const usuario = new Usuario(req.body);
+      usuario.token = generarId();
+      const usuarioAlmacenado = await usuario.save();
+      
+      // Usuario registrado exitosamente, envía un mensaje de éxito
+      const error = new Error("Usuario Registrado Correctamente");
+      return res.status(201).json({ msg:error.message })
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: "Hubo un error al registrar el usuario" });
     }
-};
+  };
 
+  
 const autenticar = async (req, res) => {
     const { email, password } = req.body;
 
@@ -46,6 +71,7 @@ const autenticar = async (req, res) => {
             nombre: usuario.nombre,
             email: usuario.email,
             token: generarJWT(usuario._id),
+            msg: "Inicio de sesión exitoso",
         })
     } else{
         const error = new Error("Password Incorrecto");
