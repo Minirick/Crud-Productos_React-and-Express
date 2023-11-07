@@ -20,29 +20,37 @@ conectarDB();
 
 
 // Configuración de cors
-const whitelist = ['http://localhost:5173'];
+
+const whitelist = ['http://localhost:5173' , 'http://localhost:7777/public/uploads/prueba2.png' ];
+// const corsOption = {
+//     origin: function(origin, callback){
+//         if(whitelist.includes(origin)){
+//             // puede consultar la API
+//             callback(null, true);
+//         }else{
+//             // No esta permitido
+//             callback(new Error("Error de Cors"));
+//         }
+//     },
+// };
 
 const corsOption = {
-    origin: function(origin, callback){
-        if(whitelist.includes(origin)){
-            // puede consultar la API
-            callback(null, true);
-        }else{
-            // No esta permitido
-            callback(new Error("Error de Cors"));
-        }
-    },
+    origin: '*',
 };
 
 app.use(cors(corsOption));
 
 
+app.use(express.static('public'));
   
 // Routing
 /*app.get('/', (req, res) => {
     res.send('Hello world')
 })
 */
+
+
+
 app.use("/api/admin", adminRoutes);
 app.use("/api/usuarios", usuarioRoutes);
 app.use("/api/pedidos", pedidoRoutes);

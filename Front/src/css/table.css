@@ -1,7 +1,6 @@
 
 .styled-table {
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 780px;
@@ -35,3 +34,16 @@
     font-weight: bold;
     color: #052922;
 }
+
+.iconos{
+    font-size: 25px;
+    padding: 7px;
+    color: #393f3d;
+}
+
+.trash{
+    font-size: 25px;
+    padding: 7px;
+    color: rgb(192, 14, 14);
+}
+
