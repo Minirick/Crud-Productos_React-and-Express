@@ -23,7 +23,7 @@ export const Card_product = (props) => {
     <div className="card_b">
         <div className="imgBox">
             <Imagen
-                src={props.imagen} 
+                src={'http://localhost:7777' + props.imagen} 
             />
         </div>
         <div className="contentBox">

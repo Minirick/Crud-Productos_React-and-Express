@@ -27,6 +27,7 @@ const Products = () => {
   const [productToEdit, setProductToEdit] = useState(null);
   const [alerta, setAlerta] = useState({});
 
+  //Obtener datos desde DB
   useEffect(() => {
     axios.get('http://localhost:7777/api/productos/listar')
       .then((response) => {
@@ -37,18 +38,17 @@ const Products = () => {
       });
   }, []);
 
+  
+  //Ventana Modal
   const openModal = () => {
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
   const openDeleteConfirmation = (productId) => {
     setProductToDelete(productId);
   };
-
   const confirmDelete = () => {
     axios.delete(`http://localhost:7777/api/productos/eliminar/${productToDelete}`)
       .then((response) => {
@@ -63,7 +63,6 @@ const Products = () => {
         console.error('Error al eliminar el producto:', error);
       });
   };
-
   const openEditModal = (productId) => {
     console.log('Abriendo modal de edición para el producto con ID:', productId);
     const product = data.find((item) => item._id === productId);
@@ -83,7 +82,7 @@ const Products = () => {
         <table className="styled-table">
           <thead>
             <tr>
-              <th>Nombre</th>
+              <th>Producto</th>
               <th>Precio</th>
               <th>Descripcion</th>
               <th>Imagen</th>
