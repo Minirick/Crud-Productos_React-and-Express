@@ -86,9 +86,9 @@ const Registrar = () => {
       <>  
         <Contenedor>
       
-          <div class="container6">
+          <div className="container6">
          
-            <div class="form-container">
+            <div className="form-container">
                 <br />
                 <div className='text'>
                  <h1>Regístrate</h1>

@@ -1,6 +1,7 @@
 .contenedor {
     width: 100%;
-    background-image: url("https://media.revistagq.com/photos/635104525b252d6dc183d415/16:9/w_2560%2Cc_limit/GettyImages-740624151.jpg");
+    background-image: url("http://localhost:7777/uploads/Fondo.webp");
+    /* background-image: url("https://media.revistagq.com/photos/635104525b252d6dc183d415/16:9/w_2560%2Cc_limit/GettyImages-740624151.jpg"); */
     padding: 250px 100px;
     text-align: center;
     background-position: center center;

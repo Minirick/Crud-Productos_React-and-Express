@@ -58,7 +58,7 @@ const obtenerProducto = async (req, res) => {
 // Controlador para obtener un producto por su número (ID)
 const obtenerProductoPorId = async (req, res) => {
     try {
-        const producto = await Producto.findOne({ numero_producto: req.params.numero_producto }); // Cambiar el nombre de la variable
+        const producto = await Producto.findOne({ _id: req.params._id }); // Cambiar el nombre de la variable
         if (!producto) {
             return res.status(404).json({ error: "Producto no encontrado" });
         }

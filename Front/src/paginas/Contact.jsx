@@ -25,30 +25,30 @@ const Contact = () => {
     <>
    
       
-<div class="container4">
-  <div class="content">
-    <div class="image-box">
+<div className="container4">
+  <div className="content">
+    <div className="image-box">
     <Imagen
             src={ImagenContact}
         />	
     </div>
   <form action="" method="POST">
      
-    <div class="topic">¡Contactenos!</div>
-    <div class="input-box">
+    <div className="topic">¡Contactenos!</div>
+    <div className="input-box">
       <input type="text" required name="nombre"></input>
       <label>Nombre</label>
     </div>
-    <div class="input-box">
+    <div className="input-box">
       <input type="text" name="correo" required></input>
       <label>Correo</label>
     </div>
 
-    <div class="message-box" >
+    <div className="message-box" >
       <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
       <label>Mensaje</label>
     </div>
-    <div class="input-box">
+    <div className="input-box">
       <input type="submit" value="Enviar Mensaje"></input>
     </div>
   </form>

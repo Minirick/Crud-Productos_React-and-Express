@@ -53,36 +53,36 @@ const Questions = () => {
                 <Titulos>¿Realizan Domicilios?</Titulos>
                 </a>
             </div>
-            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                <div class="card-body">
+            <div id="collapseOne" className="collapse show" data-bs-parent="#accordion">
+                <div className="card-body">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                 book. It has survived not only five centuries, but also the leap into electronic typesetting
                 </div>
             </div>
             </div>
-            <div class="card">
-            <div class="card-header">
-                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+            <div className="card">
+            <div className="card-header">
+                <a className="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
                 <Titulos>¿Servicio Contraentrega?</Titulos>
             </a>
             </div>
-            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                <div class="card-body">
+            <div id="collapseTwo" className="collapse" data-bs-parent="#accordion">
+                <div className="card-body">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                 book. It has survived not only five centuries, but also the leap into electronic typesetting
                 </div>
             </div>
             </div>
-             <div class="card">
-            <div class="card-header">
-                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+             <div className="card">
+            <div className="card-header">
+                <a className="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
                 <Titulos>¿Reciben tarjeta de credito/debito?</Titulos>
                 </a>
             </div>
-            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                <div class="card-body">
+            <div id="collapseThree" className="collapse" data-bs-parent="#accordion">
+                <div className="card-body">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                 book. It has survived not only five centuries, but also the leap into electronic typesetting               

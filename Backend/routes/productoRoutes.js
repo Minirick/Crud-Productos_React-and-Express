@@ -13,7 +13,7 @@ const upload = configurarMulter(); // Llamar a configurarMulter para obtener el 
 
 router.post('/', upload.single('imagen'), crearProducto);
 router.get('/listar', obtenerProducto);
-router.get('/buscar/:numero_producto', obtenerProductoPorId);
+router.get('/buscar/:_id', obtenerProductoPorId);
 router.put('/actualizar/:_id', upload.single('imagen'), actualizarProducto);
 router.delete('/eliminar/:_id', eliminarProducto);
 

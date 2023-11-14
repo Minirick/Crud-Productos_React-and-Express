@@ -1,21 +1,20 @@
 import mongoose from "mongoose";
 
 const pedidoSchema = mongoose.Schema({
-    numero_pedido: {
+    nombre: {
+        type: String,
+        required: true,
+    },
+    precio: {
         type: Number,
         required: true,
         trim: true,
     },
-    producto: {
-        type: String,
-        required: true,
-    },
     cliente: {
         type: String,
         required: true,
-        trim: true,
     },
-    valor_pedido: {
+    direccion: {
         type: String,
         required: true,
         trim: true,

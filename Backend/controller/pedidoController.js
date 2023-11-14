@@ -3,15 +3,16 @@ import Pedido from '../models/Pedido.js'; // Asegúrate de que la ruta sea corre
 // Controlador para crear un nuevo pedido
 const crearPedido = async (req, res) => {
     try {
-        const { numero_pedido, producto, cliente, valor_pedido } = req.body;
+        const { nombre, precio, cliente, direccion } = req.body;
         const nuevoPedido = new Pedido({
-            numero_pedido,
-            producto,
+            nombre,
+            precio,
             cliente,
-            valor_pedido
+            direccion
         });
         const pedidoGuardado = await nuevoPedido.save();
-        res.status(201).json(pedidoGuardado);
+        const mensaje = 'Pedido creado con exito';
+        return res.status(201).json({ msg: mensaje });
     } catch (error) {
         console.log(error); // Imprimir los errores
         res.status(500).json({ error: "Error al crear el pedido" });

@@ -29,7 +29,7 @@ export const Card_product = (props) => {
         <div className="contentBox">
           <h3>{props.title}</h3>
           <h2 className="price">{props.price}</h2>
-          <a href="#" class="buy">Comprar</a>
+          <a href={'/producto-view/' + props.enlace} className="buy">Comprar</a>
         </div>
     </div>
 
